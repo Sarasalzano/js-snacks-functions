@@ -1,4 +1,4 @@
-/* Scrivi una funzione che accetti una stringa contenente un nome e restituisca un saluto seguito dal nome fornito (es. "Ciao [nome]") */
+/* Scrivi una funzione che accetti una stringa contenente un nome e restituisca un saluto seguito dal nome fornito (es. "Ciao [nome]") 
 
 const userName = 'Mario';
 const greeting = "Ciao";
@@ -8,7 +8,7 @@ let userGreeting;
 // Dichiara la funzione qui.
 const greetingSentence = (saluto, nome) => {
     //compongo il saluto finale con il saluto più il nome 
-    userGreeting = saluto + nome;
+    userGreeting = saluto + " " + nome;
     return userGreeting;
 }
 
@@ -17,4 +17,4 @@ greetingSentence(greeting, userName);
 
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
-console.log(greetingSentence(greeting, userName));
+console.log(greetingSentence(greeting, userName));*/

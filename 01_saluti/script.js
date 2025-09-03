@@ -8,7 +8,7 @@ let userGreeting;
 // Dichiara la funzione qui.
 function greetingSentence(saluto, nome) {
     //compongo il saluto finale con il saluto più il nome 
-    userGreeting = saluto + nome;
+    userGreeting = saluto + " " + nome;
     return userGreeting;
 }
 
