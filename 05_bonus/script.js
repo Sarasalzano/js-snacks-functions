@@ -6,20 +6,23 @@ e buonasera se è sera (oltre le 17)
 */
 
 const nameUser = 'Mario';
+//dichiaro variabile che mostrerà il messaggio finale
 let finalMessage;
+//stabilisco la data e l'rario del giorno e stampo
 const todayDate = new Date("September 3, 2025 16:55");
 console.log(todayDate.getHours());
 
 
 // Dichiara la funzione qui.
 function messageByTime(messaggio, nome) {
+    //se l'orario è fino alle 13, allora il messaggio finale sarà buongiorno + nome 
     if(todayDate.getHours() <= 13) {
         finalMessage = "Buongiorno" + " " + nome;
-        
+     //se invece l'orario è fino alle 17, allora il messaggio finale sarà buon pomeriggio + nome     
     } else if(todayDate.getHours() <=17) {
         finalMessage = "Buon pomeriggio"+ " " + nome;
-    }
-     else if(todayDate.getHours() > 17) {
+         //se l'orario è più tardi delle 17, allora il messaggio finale sarà buonasera + nome 
+    } else if(todayDate.getHours() > 17) {
        finalMessage = "Buonasera" + " " + nome;
 }
 return finalMessage;
