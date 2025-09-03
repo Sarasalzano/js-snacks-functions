@@ -2,10 +2,12 @@
 
 const userName = 'Mario';
 const greeting = "Ciao";
+//dichiaro la variabile che scrivera il saluto finale
 let userGreeting; 
 
 // Dichiara la funzione qui.
 function greetingSentence(saluto, nome) {
+    //compongo il saluto finale con il saluto più il nome 
     userGreeting = saluto + nome;
     return userGreeting;
 }
