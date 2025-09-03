@@ -5,14 +5,28 @@ buon pomeriggio se è pomeriggio (fino alle 17)
 e buonasera se è sera (oltre le 17)
 */
 
-const name = 'Mario';
+const nameUser = 'Mario';
+let finalMessage;
+const todayDate = new Date("September 3, 2025 16:55");
+console.log(todayDate.getHours());
 
 
 // Dichiara la funzione qui.
-
+function messageByTime(messaggio, nome) {
+    if(todayDate.getHours() <= 13) {
+        finalMessage = "Buongiorno" + " " + nome;
+        
+    } else if(todayDate.getHours() <=17) {
+        finalMessage = "Buon pomeriggio"+ " " + nome;
+    }
+     else if(todayDate.getHours() > 17) {
+       finalMessage = "Buonasera" + " " + nome;
+}
+return finalMessage;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
-
-
+messageByTime(finalMessage, nameUser);
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
+console.log(messageByTime(finalMessage, nameUser));
