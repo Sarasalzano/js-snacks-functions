@@ -14,8 +14,25 @@ console.log(todayDate.getHours());
 
 
 // Dichiara la funzione qui.
+
+/* FUNZIONI TRADIZIONALI 
 function messageByTime(messaggio, nome) {
     //se l'orario è fino alle 13, allora il messaggio finale sarà buongiorno + nome 
+    if(todayDate.getHours() <= 13) {
+        finalMessage = "Buongiorno" + " " + nome;
+     //se invece l'orario è fino alle 17, allora il messaggio finale sarà buon pomeriggio + nome     
+    } else if(todayDate.getHours() <=17) {
+        finalMessage = "Buon pomeriggio"+ " " + nome;
+         //se l'orario è più tardi delle 17, allora il messaggio finale sarà buonasera + nome 
+    } else if(todayDate.getHours() > 17) {
+       finalMessage = "Buonasera" + " " + nome;
+}
+return finalMessage;
+}
+
+ARROW FUNCTION*/
+const messageByTime = (messaggio, nome) => {
+     //se l'orario è fino alle 13, allora il messaggio finale sarà buongiorno + nome 
     if(todayDate.getHours() <= 13) {
         finalMessage = "Buongiorno" + " " + nome;
      //se invece l'orario è fino alle 17, allora il messaggio finale sarà buon pomeriggio + nome     
@@ -32,4 +49,6 @@ return finalMessage;
 messageByTime(finalMessage, nameUser);
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
-console.log(messageByTime(finalMessage, nameUser));
+console.log(messageByTime(finalMessage, nameUser)); 
+
+
